@@ -27,6 +27,8 @@ window.addEventListener('DOMContentLoaded', function() {
         selectedCards.push(card);
       }
 
+      console.log('Printing the selected cards', selectedCards);
+
       // If we have selected two cards, see if they match.
       if (selectedCards.length === 2) {
         console.log('The length of the selected cards array is 2');
@@ -36,6 +38,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
         if (card1.innerText === card2.innerText) {
+          console.log('Card 1 and Card 2 match'); // confirmed the code runs when cards match
           matchedCards.push(card1, card2);
           card1.classList.add('is-matched');
           card2.classList.add('is-matched');
@@ -44,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function() {
         // Regardless of whether or not the cards match, deselect them and reset
         // the collection of matched cards.
         card1.classList.remove('is-selected');
-        card3.classList.remove('is-selected');
+        card2.classList.remove('is-selected'); // corrected the typo (changed it from card3 to card2)
         selectedCards = [];
       }
 
