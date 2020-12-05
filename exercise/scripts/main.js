@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
       if (selectedCards.length < 2) { 
         console.log('Selecting the card', card);
         card.classList.add('is-selected');
-        selectedCards.push(card);
+        selectedCards.push(card); //added push to the array
       }
 
       console.log('Printing the selected cards', selectedCards);
