@@ -33,7 +33,7 @@ window.addEventListener('DOMContentLoaded', function() {
       if (selectedCards.length === 2) {
         console.log('The length of the selected cards array is 2');
         var card1 = selectedCards[0];
-        var card2 = selectedCards[1];
+        var card2 = selectedCards[1]; //corrected the array number from 0 to 1
 
         // If the cards match, add them to the collection of matched cards and
         // apply the correct CSS class.
@@ -52,7 +52,7 @@ window.addEventListener('DOMContentLoaded', function() {
       }
 
       // If we've matched all the cards, display a message.
-      if (matchedCards.length > cards.length) {
+      if (matchedCards.length === cards.length) { // the mathced card length must exactly equal the number of cards
         alert('You matched all the cards, nice job!');
       }
     });
